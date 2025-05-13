@@ -28,7 +28,7 @@ import (
 	"github.com/mattermost/mattermost/server/public/pluginapi"
 	"github.com/mattermost/mattermost/server/public/shared/httpservice"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
-	"github.com/scoutante112/mattermost-plugin-ai/server/gemini"
+	"github.com/mattermost/mattermost-plugin-ai/server/gemini"
 )
 
 const (
