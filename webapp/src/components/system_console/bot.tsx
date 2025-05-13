@@ -69,6 +69,7 @@ const mapServiceTypeToDisplayName = new Map<string, string>([
     ['openaicompatible', 'OpenAI Compatible'],
     ['azure', 'Azure'],
     ['anthropic', 'Anthropic'],
+    ['gemini', 'Gemini'],
 ]);
 
 function serviceTypeToDisplayName(serviceType: string): string {

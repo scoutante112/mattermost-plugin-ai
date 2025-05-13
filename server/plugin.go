@@ -28,6 +28,7 @@ import (
 	"github.com/mattermost/mattermost/server/public/pluginapi"
 	"github.com/mattermost/mattermost/server/public/shared/httpservice"
 	"github.com/nicksnyder/go-i18n/v2/i18n"
+	"github.com/scoutante112/mattermost-plugin-ai/server/gemini"
 )
 
 const (
@@ -254,6 +255,8 @@ func (p *Plugin) getLLM(llmBotConfig llm.BotConfig) llm.LanguageModel {
 		result = openai.NewAzure(llmBotConfig.Service, p.llmUpstreamHTTPClient, llmMetrics)
 	case llm.ServiceTypeAnthropic:
 		result = anthropic.New(llmBotConfig.Service, p.llmUpstreamHTTPClient, llmMetrics)
+	case llm.ServiceTypeGemini:
+		result = gemini.New(llmBotConfig.Service, p.llmUpstreamHTTPClient, llmMetrics)
 	}
 
 	cfg := p.getConfiguration()
