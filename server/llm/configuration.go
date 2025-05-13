@@ -43,6 +43,7 @@ const (
 	ServiceTypeOpenAICompatible = "openaicompatible"
 	ServiceTypeAzure            = "azure"
 	ServiceTypeAnthropic        = "anthropic"
+	ServiceTypeGemini           = "gemini"
 )
 
 type BotConfig struct {
